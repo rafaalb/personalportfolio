@@ -1,0 +1,32 @@
+.project-url {
+  margin: 30px;
+  margin-left: 0px;
+  a {
+    font-weight: 700;
+    border-bottom: none;
+    cursor: pointer;
+    div {
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 4px;
+      display: inline;
+      &:hover {
+        background-color: _palette(border-bg);
+      }
+    }
+  }
+}
+
+.image main {
+  img {
+    height: 40px;
+  }
+}
+
+.main-desc-project {
+  display: flex;
+  justify-content: space-between;
+  h2 span {
+    font-size: 10px;
+  }
+}
