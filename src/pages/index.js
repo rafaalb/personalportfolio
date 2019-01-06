@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-
+import Notification from '../components/Notification'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
@@ -15,7 +15,9 @@ class IndexPage extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: 'is-loading'
+      loading: 'is-loading',
+      showNotification: false,
+      success: false
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -24,6 +26,14 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount () {
+    const { search } = this.props.location
+    const query = search.replace("?","").split("=")
+
+    if (query.length >= 2) {
+      this.timeoutNotif = setTimeout(() => {
+        this.setState({ showNotification: true });
+      }, 1000);
+    }
     this.timeoutId = setTimeout(() => {
         this.setState({loading: ''});
     }, 100);
@@ -33,6 +43,9 @@ class IndexPage extends React.Component {
   componentWillUnmount () {
     if (this.timeoutId) {
         clearTimeout(this.timeoutId);
+    }
+    if (this.timeoutNotif) {
+      clearTimeout(this.timeoutNotif);
     }
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
@@ -106,6 +119,7 @@ class IndexPage extends React.Component {
               setWrapperRef={this.setWrapperRef}
             />
             <Footer timeout={this.state.timeout} />
+            {this.state.showNotification && <Notification />}
           </div>
           <div id="bg"></div>
         </div>
