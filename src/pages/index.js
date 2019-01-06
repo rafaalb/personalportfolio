@@ -26,10 +26,8 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount () {
-    const { search } = this.props.location
-    const query = search.replace("?","").split("=")
 
-    if (query.length >= 2) {
+    if (this.props.notification) {
       this.timeoutNotif = setTimeout(() => {
         this.setState({ showNotification: true });
       }, 1000);
