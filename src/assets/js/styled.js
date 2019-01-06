@@ -44,7 +44,6 @@ export const Message = styled(animated.div)`
 
 export const Content = styled('div')`
   color: white;
-  background: rgba(255, 255, 255, 0.3);
   padding: 10px 18px;
   font-size: 12px;
   display: grid;
@@ -53,7 +52,9 @@ export const Content = styled('div')`
   grid-gap: 10px;
   overflow: hidden;
   height: auto;
-  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid white;
+  border-radius: 4px;
   margin-top: ${props => (props.top ? '0' : '10px')};
   margin-bottom: ${props => (props.top ? '10px' : '0')};
   span {
