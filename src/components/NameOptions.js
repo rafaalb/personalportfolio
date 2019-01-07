@@ -9,7 +9,7 @@ export default class NameOptions extends Component {
       'Critical thinker',
       'Team player',
       'Problem solver',
-      'Tech passionate'
+      'Full Stack developer'
     ],
     index: 0
   }
