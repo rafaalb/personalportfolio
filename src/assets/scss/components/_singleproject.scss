@@ -1,6 +1,8 @@
 .project-url {
   margin: 30px;
   margin-left: 0px;
+  display: flex;
+  justify-content: space-between;
   a {
     font-weight: 700;
     border-bottom: none;
@@ -25,8 +27,15 @@
 
 .main-desc-project {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   h2 span {
     font-size: 10px;
+  }
+  .tooltip {
+    border: 1px solid white;
+    &:after { 
+      border-top-color: white!important;
+    }
   }
 }

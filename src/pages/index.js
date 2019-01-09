@@ -5,6 +5,8 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 
+import Stars from './../components/Stars'
+
 import '../assets/js/fontawesome';
 
 class IndexPage extends React.Component {
@@ -17,7 +19,8 @@ class IndexPage extends React.Component {
       article: '',
       loading: 'is-loading',
       showNotification: false,
-      success: false
+      success: false,
+      loaded: false
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -27,6 +30,12 @@ class IndexPage extends React.Component {
 
   componentDidMount () {
 
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera
+    if ((/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || /android/i.test(userAgent)) {
+      this.setState({ isMobile: true })
+    }
+
+    this.setState({ loaded: true })
     if (this.props.notification) {
       this.timeoutNotif = setTimeout(() => {
         this.setState({ showNotification: true });
@@ -102,6 +111,16 @@ class IndexPage extends React.Component {
     // }
   }
 
+  renderBackground = () => {
+    if (!this.state.loaded) return null;
+    if (!this.state.isMobile) {
+      return <Stars />      
+    }
+    return (
+      <div id="bg"></div>
+    )
+  }
+
   render() {
     return (
       <Layout location={this.props.location}>
@@ -119,7 +138,7 @@ class IndexPage extends React.Component {
             <Footer timeout={this.state.timeout} />
             {this.state.showNotification && <Notification />}
           </div>
-          <div id="bg"></div>
+          {this.renderBackground()}
         </div>
       </Layout>
     )

@@ -37,4 +37,16 @@
 		&.page {
 			@include vendor('justify-content', 'flex-start');
 		}
+		.heart {
+			font-size: 13px;
+		}
+		.heart:hover {
+			animation: beat .25s infinite alternate;
+			transform-origin: center;
+		}
+		
+		/* Heart beat animation */
+		@keyframes beat {
+			to { transform: scale(1.4); }
+		}
 	}

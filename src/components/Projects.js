@@ -107,6 +107,7 @@ class Projects extends Component {
                 style={
                   selectedSkills.includes(skill) ? { backgroundColor: 'rgba(255, 255, 255, 0.15)' } : {}
                 }
+                key={`${skill}-skill`}
               >
                 {skill}
               </li>
