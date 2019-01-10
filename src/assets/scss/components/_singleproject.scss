@@ -19,6 +19,11 @@
   }
 }
 
+.proj-details-space {
+  display: flex;
+  justify-content: space-between;
+}
+
 .image main {
   img {
     height: 40px;

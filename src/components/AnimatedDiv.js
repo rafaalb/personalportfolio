@@ -21,7 +21,7 @@ class AnimatedText extends Component {
         to={{ transform: 'translate3d(0,0px,0)', opacity: 1 }}
       >
         {props => 
-          <div style={props}>
+          <div style={{ ...this.props.style, ...props }}>
             {this.props.children}
           </div>
         }

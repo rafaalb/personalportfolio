@@ -10,11 +10,18 @@ const projects = [
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/b5/817107/7f6b6a5e17c8e2f5cbc0593faa1524ea-original.png'
     ],
     url: 'https://www.oktium.com',
+    technicalDesc: [
+      'Wrote, refactored and tested dozens of new components, including best practices for styling in a large code base.',
+      'Optimized webpack to handle generation of script bundles across the entire application.',
+      'Introduced test driven development techniques using Jest',
+      'Worked on development techniques, library updates to ensure cross browser compatibility on video calls on a wide variety of devices',
+      'Using Node with React and Express JS to serve components on the client and server.'
+    ],
     skills: ['javascript', 'html5', 'css3', 'react', 'redux', 'git'],
   },
   {
     name: 'Scala Pros',
-    description: 'Scala Mobile App',
+    description: 'Personal Assistant for contractors to improve productivity',
     cover: 'Main goal of this app is for users to send quotes, send done projects to clients, approve projects or collections and to gain more clients over this platform React Native developer, from early stage of the app. With over 10k active users.',
     image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/47/769264/dcda0af052e6c2296c4588b7a0b766a7-thumb_jpg.jpg',
     images: [
@@ -28,6 +35,13 @@ const projects = [
       users: 25000,
       rating: 4.2
     },
+    technicalDesc: [
+      'Developed an initial version of an iOS and Android app with React Native',
+      'Used Redux to store data from multiple API endpoints',
+      'Unit tested React components and Redux reducers with Jest’s snapshot feature',
+      'Added type checking with Flow',
+      'Designed reusable user interface components in React and Javascript ES6'
+    ],
     skills: ['react native', 'react', 'javascript', 'git', 'redux', 'redux saga']
   },
   {
@@ -40,12 +54,18 @@ const projects = [
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/7c/640258/0479eb88f30785ad00fab58f33c40fce-original.png',
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/7c/640258/5ffc2feb6c6597e5fe11788f8f6d4a20-original.png',
     ],
+    technicalDesc: [
+      'Developed an initial version of an iOS and Android app with React Native',
+      'Used Redux Saga to handle asynchronous dispatch of actions, Used Redux to store data from multiple API endpoints',
+      'Designed reusable user interface components in React and Javascript ES6',
+      'Built a socket io based chat with location sharing'
+    ],
     skills: ['react native', 'react', 'javascript', 'git', 'redux']
   },
   {
-    name: 'Kissmet',
+    name: 'Kyssmet',
     description: 'Mobile App',
-    cover: 'Kissmet app gives a listing selection of products, has features like Barcode scanning and if the product exists show the detail of the product, add to cart feature, win discount on selected products.',
+    cover: 'Kyssmet app gives a listing selection of products, has features like Barcode scanning and if the product exists show the detail of the product, add to cart feature, win discount on selected products.',
     image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/8a/667751/bda1d4daa64aa1a6e93fa7be844ecdb2-thumb_jpg.jpg',
     images: [
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/8a/667751/0eb352254b1d42e9303db7554f3c7347-original.jpg',
@@ -53,6 +73,11 @@ const projects = [
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/8a/667751/cb63040e9b6af1038890aa95a137538b-original.jpg'
     ],
     url: 'https://appadvice.com/game/app/kyssmet/1327977319',
+    technicalDesc: [
+      'Developed unit and end-to-end tests for both front-end and back-end code of the mobile app',
+      'Created a cross-platform e-commerce mobile app in React Native for Android and iOS.',
+      'Implemented payment gateways including Apple Pay and Stripe'
+    ],
     skills: ['react native', 'react', 'javascript', 'git', 'redux']
   },
   {
@@ -67,6 +92,11 @@ const projects = [
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/2c/640257/83674245c4af98f55d981aac42832037-original.jpeg',
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/2c/640257/ea96dfb185b145bf062f601d51ead91d-original.jpeg'
     ],
+    technicalDesc: [
+      'Responsible for building an internal, responsive AngularJS single page application.',
+      'Built the UI with Bootstrap 3. Grunt was used for various automated tasks (JS uglifying, Sass compilation etc) with Bower as the package manager for third party libraries.',
+      'Refactored Loopback controllers to support front end requirements.'
+    ],
     skills: ['mongodb', 'loopback', 'express', 'javascript', 'angular', 'git', 'html5', 'node']
   },
   {
@@ -80,6 +110,10 @@ const projects = [
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/04/671777/64ade8af52191b5585853ba864343e37-original.png'
     ],
     skills: ['javascript', 'css3', 'html5', 'grunt', 'angular', 'node'],
+    technicalDesc: [
+      'Worked on a client-side Angular JS application to allow clients to update content from various devices.',
+      'Collaborated with design team to improve user experience and create mockups of each page'
+    ],
     url: 'http://crossbordr.com'
   },
   {
@@ -89,6 +123,10 @@ const projects = [
     image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/04/682203/f66b38816e31a488c58533857114a2e2-thumb_jpg.jpg',
     images: [
       'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/04/682203/f66b38816e31a488c58533857114a2e2-original.png'
+    ],
+    technicalDesc: [
+      'Matched design mockups to code on every little detail',
+      'Built website using wordpress, HTML5, CSS3 and JavaScript'
     ],
     skills: ['html5', 'javascript', 'css3'],
     url: 'http://skygrid.ca'

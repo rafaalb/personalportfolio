@@ -24,15 +24,15 @@ class Projects extends Component {
       projects: shuffle(state.projects),
       matching: shuffle(state.matching),
   }))
-  componentDidMount() {
-    let i = 0
-    this.interval = setInterval(() => {
-      this.shuffle();
-      i++;
-      if (i === 3) clearInterval(this.interval)
-    }, 7000)
-    setTimeout(this.shuffle, 2000)
-  }
+  // componentDidMount() {
+  //   let i = 0
+  //   this.interval = setInterval(() => {
+  //     this.shuffle()
+  //     i++
+  //     if (i === 3) clearInterval(this.interval)
+  //   }, 7000)
+  //   setTimeout(this.shuffle, 2000)
+  // }
   componentWillUnmount() {
     clearInterval(this.interval)
   }

@@ -73,15 +73,37 @@ const Skills = ({ skills }) => (
   ))
 )
 
+const TechUsed = ({ project }) => (
+  <>
+    <Spring
+      from={{ height: 0, border: 0, width: 0 }}
+      to={{ height: 22, border: 1, width: 100  }}
+      config={{ duration: 1500, delay: 1000 }}
+    >
+      {({ height, border, width }) => (
+        <TechText width={width} border={border}>
+          <AnimatedSpan height={height}>
+            T
+          </AnimatedSpan>
+          ech Used
+        </TechText>
+      )}
+    </Spring>
+    <Skills skills={project.skills} />
+  </>
+)
+
 
 export default ({ project }) => {
-  console.log(project)
   return (
     <div className="main-desc-project">
-      <div>
-        <AnimatedDiv>
+      <div className={'proj-details-space'}>
+        <AnimatedDiv style={{ width: '30%' }}>
           <h3>{project.name}</h3>
           <p>{project.description}</p>
+        </AnimatedDiv>
+        <AnimatedDiv from={'right'} style={{ maxWidth: '70%' }}>
+          <TechUsed project={project} />
         </AnimatedDiv>
       </div>
       <div>
@@ -92,28 +114,21 @@ export default ({ project }) => {
       <AnimatedText from={'right'}>
         {project.cover}
       </AnimatedText>
+      <AnimatedDiv from={'bottom'}>
+        <h3>Technical Details: </h3>
+        {project.technicalDesc.map((desc) => (
+          <div key={`desc-${desc}`}>
+            <p>{desc}</p>
+          </div>
+        ))}
+      </AnimatedDiv>
       <AnimatedDiv from={'left'}>
         <div className="project-url">
-          <a href={project.url}>
-            <div>Visit website</div>
-          </a>
-          <div>
-            <Spring
-              from={{ height: 0, border: 0, width: 0 }}
-              to={{ height: 22, border: 1, width: 100  }}
-              config={{ duration: 1500, delay: 1000 }}
-            >
-              {({ height, border, width }) => (
-                <TechText width={width} border={border}>
-                  <AnimatedSpan height={height}>
-                    T
-                  </AnimatedSpan>
-                  ech Used
-                </TechText>
-              )}
-            </Spring>
-            <Skills skills={project.skills} />
-          </div>
+          {project.url &&
+            <a href={project.url}>
+              <div>Visit website</div>
+            </a>
+          }
         </div>
       </AnimatedDiv>
       <ReactTooltip
