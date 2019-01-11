@@ -31,7 +31,10 @@
 			background-color: transparentize(_palette(bg), 0.15);
 			border-radius: _size(border-radius);
 			opacity: 0;
-
+			@media screen and (min-width: 800px) {
+				background-color: transparent;
+				border: 1px solid white;
+			}
 			&.timeout {
 				display: none;
 			}
