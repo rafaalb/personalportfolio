@@ -114,7 +114,7 @@ function animate() {
         for(var i in points) {
             // detect points in range
             if(Math.abs(getDistance(target, points[i])) < 4000) {
-                points[i].active = 0.3;
+                points[i].active = 0.5;
                 points[i].circle.active = 0.6;
             } else if(Math.abs(getDistance(target, points[i])) < 20000) {
                 points[i].active = 0.1;
@@ -135,7 +135,7 @@ function animate() {
 }
 
 function shiftPoint(p) {
-    TweenLite.to(p, 1+1*Math.random(), {
+    TweenLite.to(p, 1 + 1 * Math.random(), {
       x: p.originX - 50 + Math.random() * 100,
       y: p.originY - 50 + Math.random() * 100,
       onComplete: function() {
@@ -171,7 +171,7 @@ function Circle(pos,rad,color) {
         ctx.beginPath();
         ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
         // ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
-        ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
+        // ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
         ctx.fill();
     };
 }

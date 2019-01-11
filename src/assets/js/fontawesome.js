@@ -17,7 +17,6 @@ import {
   faPython,
   faGithub
 } from '@fortawesome/free-brands-svg-icons'
-import { faCircle } from '@fortawesome/free-regular-svg-icons'
 
 // we load here only the necesary icons so we avoid overloading the bundle with all the icons
 

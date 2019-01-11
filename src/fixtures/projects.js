@@ -14,7 +14,7 @@ const projects = [
       'Wrote, refactored and tested dozens of new components, including best practices for styling in a large code base.',
       'Optimized webpack to handle generation of script bundles across the entire application.',
       'Introduced test driven development techniques using Jest',
-      'Worked on development techniques, library updates to ensure cross browser compatibility on video calls on a wide variety of devices',
+      'Worked on library updates and development techniques to ensure cross browser compatibility on video calls on a wide variety of devices',
       'Using Node with React and Express JS to serve components on the client and server.'
     ],
     skills: ['javascript', 'html5', 'css3', 'react', 'redux', 'git'],
