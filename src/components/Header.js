@@ -4,6 +4,8 @@ import NameOptions from './NameOptions'
 import Logo from './Logo'
 import RevealText from 'react-reveal-text'
 
+const pdf = 'https://drive.google.com/file/d/1knbBaVrIZkSmeLKz5HuEVOeLrcYtmy69/view';
+
 class TextHeader extends Component {
     constructor() {
       super();
@@ -43,7 +45,7 @@ const Header = (props) => (
             <ul>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Intro</a></li>
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
-                <li><a href="javascript:;" onClick={() => window.location.href = '/cv.pdf'}>Resumé</a></li>
+                <li><a href="javascript:;" onClick={() => window.location.href = pdf}>Resumé</a></li>
                 {false && <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>Resumé</a></li>}
                 <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
