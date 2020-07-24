@@ -4,7 +4,7 @@ import NameOptions from './NameOptions'
 import Logo from './Logo'
 import RevealText from 'react-reveal-text'
 
-const pdf = 'https://drive.google.com/file/d/1Q4wrZPgRZ5B9ds7dfsgLK-BKZZjXmOU6/view?usp=sharing';
+const pdf = 'https://drive.google.com/file/d/1iRlGxRwRSZGJqkY2jI22kXNJf2lh3Wgs/view?usp=sharing';
 
 class TextHeader extends Component {
     constructor() {
